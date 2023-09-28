@@ -1,6 +1,6 @@
 body {
-    margin: 20%;
-    box-sizing: border-box;
+    display: grid;
+    justify-items: center;
 }
 
 .Calculator {
@@ -17,8 +17,6 @@ body {
     text-align: right;
     grid-column: 1/5;
     font-size: 30px;
-    align-items: center;
-    justify-content: end;
     padding-right: 20px;
 }
 
