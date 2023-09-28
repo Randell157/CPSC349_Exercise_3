@@ -1,7 +1,4 @@
-body{
-    margin: 0;
-}
-
-.inputBar{
-    
+.Calculator {
+    display: grid;
+    gap: 20px 20px;
 }
