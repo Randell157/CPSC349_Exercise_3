@@ -1,6 +1,6 @@
 body {
     margin: 20%;
-    /* background-color: lightgray; */
+    box-sizing: border-box;
 }
 
 .Calculator {
