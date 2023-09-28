@@ -38,11 +38,6 @@ button {
 }
 
 div button:hover {
-    background-color: gray;
+    background-color: rgb(220, 220, 220);
     opacity: 75%;
-}
-
-div button:active {
-    background-color: white;
-    opacity: 20%;
 }
