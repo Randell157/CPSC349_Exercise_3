@@ -2,18 +2,21 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: inherit;
+
 }
 
 .Calculator {
     border: 1px solid black;
     align-items: center;
+    font-size: 70px;
 }
 
 .inputBar {
-    display: grid;
+    text-align: right;
 }
 
 .InputButtons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    border: 0%;
 }
