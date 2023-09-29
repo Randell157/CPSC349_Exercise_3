@@ -11,7 +11,9 @@ function calculator(event) {
     display.value = "";
   } else if (value == "=") {
     let result = display.value;
-    display.value = eval(result);
+    let tempResult = parseFloat(Function("return " + result)().toFixed(2));
+    display.value = tempResult;
+    console.log(result);
   } else if (value == "+" || value == "-" || value == "*" || value == "/") {
     if (display.value == "") {
       alert("Empty Calculator");
@@ -30,5 +32,4 @@ function calculator(event) {
   } else {
     display.value += value;
   }
-  console.log(display.value);
 }
