@@ -14,14 +14,25 @@ function calculator(event) {
         let result = display.value;
         display.value = eval(result);
     }
-    // else if(value == '+' || value == '-' ||value == '*'||value == '/'){
-    //     if(display.value.includes('+'|| '-'||'*'||'/')){
-    //         display.value += value;
-    //     }
-    // }
+    else if(value == '+' || value == '-' ||value == '*'||value == '/'){
+        if(display.value.includes('+')){
+            display.value = display.value.replace('+', value);
+        }
+        else if(display.value.includes('-')){
+            display.value = display.value.replace('-', value);
+        }
+        else if(display.value.includes('*')){
+            display.value = display.value.replace('*', value);
+        }
+        else if(display.value.includes('/')){
+            display.value = display.value.replace('/', value);
+        }
+        else{
+            display.value += value;
+        }
+    }
     else{
         display.value += value;
     }
-
     console.log(display.value);
 }
