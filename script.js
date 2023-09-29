@@ -15,17 +15,20 @@ function calculator(event) {
         display.value = eval(result);
     }
     else if(value == '+' || value == '-' ||value == '*'||value == '/'){
-        if(display.value.includes('+')){
-            display.value = display.value.replace('+', value);
+        if (display.value == ''){
+            alert("Empty Calculator");
         }
-        else if(display.value.includes('-')){
-            display.value = display.value.replace('-', value);
+        else if(display.value.split('+').length > 1){ //if more than one + is in the string
+            display.value = display.value.slice(0, -1) + value;
         }
-        else if(display.value.includes('*')){
-            display.value = display.value.replace('*', value);
+        else if(display.value.split('-').length > 1){
+            display.value = display.value.slice(0, -1) + value;
         }
-        else if(display.value.includes('/')){
-            display.value = display.value.replace('/', value);
+        else if(display.value.split('*').length > 1){
+            display.value = display.value.slice(0, -1) + value;
+        }
+        else if(display.value.split('/').length > 1){
+            display.value = display.value.slice(0, -1) + value;
         }
         else{
             display.value += value;
