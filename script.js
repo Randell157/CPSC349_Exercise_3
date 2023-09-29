@@ -7,7 +7,21 @@ for (let button of numpad) {
 
 function calculator(event) {
     let value = event.target.innerHTML;
-    display.value += value;
+    if(value === 'C'){
+        display.value = '';
+    }
+    else if(value == '='){
+        let result = display.value;
+        display.value = eval(result);
+    }
+    // else if(value == '+' || value == '-' ||value == '*'||value == '/'){
+    //     if(display.value.includes('+'|| '-'||'*'||'/')){
+    //         display.value += value;
+    //     }
+    // }
+    else{
+        display.value += value;
+    }
 
-    console.log(value);
+    console.log(display.value);
 }
