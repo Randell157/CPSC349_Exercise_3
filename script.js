@@ -18,13 +18,17 @@ function calculator(event) {
     if (display.value == "") {
       alert("Empty Calculator");
     } else if (display.value.slice(-1) == "+") {
-      display.value = display.value.replace(display.value.slice(-1), value);
+      display.value = display.value.slice(0, -1);
+      display.value += value;
     } else if (display.value.slice(-1) == "-") {
-      display.value = display.value.replace(display.value.slice(-1), value);
+      display.value = display.value.slice(0, -1);
+      display.value += value;
     } else if (display.value.slice(-1) == "*") {
-      display.value = display.value.replace(display.value.slice(-1), value);
+      display.value = display.value.slice(0, -1);
+      display.value += value;
     } else if (display.value.slice(-1) == "/") {
-      display.value = display.value.replace(display.value.slice(-1), value);
+      display.value = display.value.slice(0, -1);
+      display.value += value;
     } else {
       display.value += value;
     }

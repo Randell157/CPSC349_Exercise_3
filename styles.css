@@ -16,7 +16,8 @@ body {
 .inputBar {
     text-align: right;
     grid-column: 1/5;
-    font-size: 70px;
+    font-size: 50px;
+    text-wrap: wrap;
     padding-right: 20px;
 }
 
