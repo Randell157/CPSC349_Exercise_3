@@ -10,10 +10,9 @@ function calculator(event) {
   if (value === "C") {
     display.value = "";
   } else if (value == "=") {
-    let result = display.value;
-    let tempResult = parseFloat(Function("return " + result)().toFixed(2));
-    display.value = tempResult;
-    console.log(result);
+    let tempResult = display.value;
+    let result = parseFloat(Function("return " + tempResult)().toFixed(2));
+    display.value = result;
   } else if (value == "+" || value == "-" || value == "*" || value == "/") {
     if (display.value == "") {
       alert("Empty Calculator");
@@ -35,4 +34,5 @@ function calculator(event) {
   } else {
     display.value += value;
   }
+  console.log(display.value);
 }
