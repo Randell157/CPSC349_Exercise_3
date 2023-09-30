@@ -17,15 +17,26 @@ function calculator(event) {
   } else if (value == "+" || value == "-" || value == "*" || value == "/") {
     if (display.value == "") {
       alert("Empty Calculator");
-    }
-    if (display.value.includes("+")) {
-      display.value = display.value.replace("+", value);
-    } else if (display.value.includes("-")) {
-      display.value = display.value.replace("-", value);
-    } else if (display.value.includes("*")) {
-      display.value = display.value.replace("*", value);
-    } else if (display.value.includes("/")) {
-      display.value = display.value.replace("/", value);
+    } else if (display.value.charAt(display.value.length - 1) == "+") {
+      display.value = display.value.replace(
+        display.value.charAt(display.value.length - 1),
+        value
+      );
+    } else if (display.value.charAt(display.value.length - 1) == "-") {
+      display.value = display.value.replace(
+        display.value.charAt(display.value.length - 1),
+        value
+      );
+    } else if (display.value.charAt(display.value.length - 1) == "*") {
+      display.value = display.value.replace(
+        display.value.charAt(display.value.length - 1),
+        value
+      );
+    } else if (display.value.charAt(display.value.length - 1) == "/") {
+      display.value = display.value.replace(
+        display.value.charAt(display.value.length - 1),
+        value
+      );
     } else {
       display.value += value;
     }
